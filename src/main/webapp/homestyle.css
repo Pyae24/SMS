@@ -33,11 +33,21 @@ body    {
 }
 
 .wrapper .field {
-    margin-top: 10px;
-    margin-left: 10px;
+    margin: 10px 15px;
 }
 
 .wrapper .btnRegister   {
-    margin-left: 10px;
+    margin-left: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper .btnLecAdmin   {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper .coursecheck   {
+    margin-left: 15px;
 }

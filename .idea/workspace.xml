@@ -10,8 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcadc957-2b89-405b-881f-4884d3f0dbf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/homestyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/student_management_system/RegistrationBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/student_management_system/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/student_management_system/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/homestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/homestyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,9 +27,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/student_management_system/Registration.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -56,14 +62,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Gusto_Projects/Project",
-    "list.type.of.created.stylesheet": "CSS",
+    "last_opened_file_path": "P:/Gusto_Projects/EJBRegistration",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.48390806",
     "settings.editor.selected.configurable": "MavenSettings",
@@ -160,8 +165,6 @@
       <workItem from="1681362201092" duration="652000" />
       <workItem from="1681886417873" duration="300000" />
       <workItem from="1683220261977" duration="5047000" />
-      <workItem from="1683352000907" duration="93000" />
-      <workItem from="1683354414940" duration="7632000" />
     </task>
     <servers />
   </component>
@@ -173,7 +176,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

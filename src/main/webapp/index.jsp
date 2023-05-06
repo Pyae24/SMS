@@ -13,24 +13,44 @@
     <div class="title">
         Register Student
     </div>
-    <form action="#">
+    <form action="Registration" method="post">
         <div class="field">
-            <input class="form-control" type="text" placeholder="Enter Student Name" aria-label="default input example">
+            <input class="form-control" type="text" name="name" placeholder="Enter Student Name" aria-label="default input example">
             </br>
-            <input class="form-control" type="text" placeholder="Enter Address" aria-label="default input example">
+            <input class="form-control" type="text" name="address" placeholder="Enter Address" aria-label="default input example">
         </div>
-        <div class="field">
-            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                <option value="ads">Advanced Database Systems</option>
-                <option value="sc">Secure Coding</option>
-                <option value="csm">Cybersecurity Management</option>
-                <option value="misc">Managing Information System Change</option>
-            </select>
+        <div class="coursecheck">
+            <input class="form-check-input" type="checkbox" name="ads" id="adscheck">
+            <label class="form-check-label" for="adscheck">
+                Advanced Database Systems
+            </label>
+        </div>
+        <div class="coursecheck">
+            <input class="form-check-input" type="checkbox" name="sc" id="sccheck">
+            <label class="form-check-label" for="sccheck">
+                Secure Coding
+            </label>
+        </div>
+        <div class="coursecheck">
+            <input class="form-check-input" type="checkbox" name="csm" id="csmcheck">
+            <label class="form-check-label" for="csmcheck">
+                Cyber Security Management
+            </label>
+        </div>
+        <div class="coursecheck">
+            <input class="form-check-input" type="checkbox" name="misc" id="mischeck">
+            <label class="form-check-label" for="mischeck">
+                Managing Information System Change
+            </label>
         </div>
         <div class="btnRegister">
-            <button class="btn btn-primary">Register</button>
+            <input type="submit" value="Register" class="btn btn-primary"/>
         </div>
     </form>
+    <div class="btnLecAdmin">
+        <a href="#" type="button" class="btn btn-warning">Lecturer</a>
+        <a href="#" type="button" class="btn btn-danger">Admin</a>
+    </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
