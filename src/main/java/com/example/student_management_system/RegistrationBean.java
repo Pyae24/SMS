@@ -1,5 +1,6 @@
 package com.example.student_management_system;
 
+import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
@@ -8,6 +9,7 @@ import org.bson.types.ObjectId;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import java.util.List;
 
 @Stateless(name = "RegistrationEJB")
 public class RegistrationBean {
@@ -24,10 +26,10 @@ public class RegistrationBean {
         ObjectId studentID = student.getObjectId("_id");
         return studentID;
     }
-    public void createStuModule(Document stumodule) {
+    public void insertStuModule(List<Document> stumodule)   {
         MongoClient mongo = mongoClientProviderBean.getMongoClient();
         MongoDatabase database = mongo.getDatabase("SMS");
         MongoCollection<Document> collection = database.getCollection("stumodule");
-        collection.insertOne(stumodule);
+        collection.insertMany(stumodule);
     }
 }

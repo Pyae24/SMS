@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.model.Filters;
@@ -27,7 +29,7 @@ public class Registration extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //Fetching params from JSP form
+        //Fetching params from index.jsp form
         Document student = new Document();
         String name = request.getParameter("name");
         String address = request.getParameter("address");
@@ -35,8 +37,20 @@ public class Registration extends HttpServlet {
         student.append("stu_addr", address);
         ObjectId studentId = registrationBean.createStudent(student);
 
-        Document stumodule = new Document();
-        stumodule.append("stu_id", studentId);
-        registrationBean.createStuModule(stumodule);
+        String[] selectedSubjects = request.getParameterValues("subject");
+
+        if (selectedSubjects != null && selectedSubjects.length > 0)    {
+            List<Document> stumodules = new ArrayList<>();
+            for (String subject : selectedSubjects) {
+                //stu_id Obj and document Obj for each selected input by a student
+                Document stumodule = new Document();
+                stumodule.append("stu_id", studentId);
+                stumodule.append("subject", subject);
+                //Adding new document to the list of modules
+                stumodules.add(stumodule);
+            }
+            //Insert new Document into module collection}
+            registrationBean.insertStuModule(stumodules);
+        }
     }
 }
